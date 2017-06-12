@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/liuyan.css' />
+  </head>
+  <body>
+    <%- include('header.ejs') %>
+		<%- include('music.ejs') %>
+			
+		<div class="bg">
+    		<ul class="bannerlist">
+					<li><marquee behavior="alternate" scrollamount="3"> 我们不停的翻弄着回忆</marquee></li>
+					<li><marquee behavior="alternate" scrollamount="5"> 却再也找不回那时的自己</marquee></li>
+					<li><marquee behavior="alternate" scrollamount="7"> 红尘一梦，不再追寻</marquee></li>
+			</ul>
+			 <div class="touxiang">	<a href="#"></a>	</div>
+			<div class="liuyantu"><img src="/images/liuyan.gif" /> </div>
+    </div>
+   
+		  
+<div class="liuyan">
+<form action="/users/liuyan" method="post" class="elegant-aero">
+<h1>留言板</h1>
+<label>
+<span>昵称 :</span>
+<input id="name" type="text"name="tit" placeholder="Your Full Name" />
+</label>
+<label>
+<span>内容 :</span>
+<textarea id="message" name="con" placeholder="Your Message to Us"></textarea>
+</label>
+<label>
+<span>Subject :</span><select name="selection">
+<option value="春夏">春夏</option>
+<option value="秋冬">秋冬</option>
+</select>
+</label>
+<label>
+<span>&nbsp;</span>
+<input type="submit" class="button" value="Send" />
+</label>
+</form>
+
+	<div class="liuyancon">
+		<table class="table">
+			<tr>
+				<th>序号</th>
+				<th>标题</th>
+				<th>内容</th>
+			</tr>
+			<% result.forEach(function(v,k){ %>
+			<tr>
+				<td> <%- k+1 %></td>
+				<td> <%- v.tltle %></td>
+				<td> <%- v.con %></td>
+			</tr>
+			<% }) %>
+		</table>
+	</div>
+</div>
+  </body>
+</html>

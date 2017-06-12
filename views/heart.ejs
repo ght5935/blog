@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel='stylesheet' href='/stylesheets/heart.css'/>
+    <script type="text/javascript" src="/js/jquery-1.11.0.js" ></script>
+    <script type="text/javascript" src="/js/common.js" ></script>
+    <script type="text/javascript" src="/js/heart.js" ></script>
+  </head>
+  <body>
+    <%- include('header.ejs') %>
+		
+		<div class="bg">
+    		<ul class="bannerlist">
+				<li>
+					<marquee behavior="alternate" scrollamount="3"> 我们不停的翻弄着回忆</marquee>
+				</li> 
+				<li>
+					<marquee behavior="alternate" scrollamount="5"> 却再也找不回那时的自己</marquee>
+				</li>
+				<li>
+					<marquee behavior="alternate" scrollamount="7"> 红尘一梦，不再追寻</marquee>
+				</li>
+			</ul>
+			
+    </div>
+	<div class="touxiang">
+		<a href="#"></a>
+		<div class="touyin">
+			<% if(!user){ %>
+				<span> 未登录 </span>
+			<% }else{ %>
+				<span>欢迎：<%- user %> </span>
+			<% } %>	
+		</div>
+	</div>
+	<!--用于插入数据-->
+	<!--<form action="/users/heart" method="post" class="elegant-aero">
+	<textarea id="message" name="con" placeholder="Your Message to Us"></textarea>
+	<input type="submit" class="but btn-danger" value="Send" />
+	</form>-->
+	
+	<div class="heartcon">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 book">【入门书籍】</div>
+				<div class="col-xs-11 book1">
+<p>入门可以通过啃书，但书本上的东西很多都已经过时了，在啃书的同时，也要持续关注技术的新动态。这里推几本我觉着不错的书：</p>
+<p>JavaScript高级编程》：可以作为入门书籍，但同时也是高级书籍，可以快速吸收基础，等到提升再回来重新看</p>
+<p>《JavaScript权威指南》：不太适合入门，但是必备，不理解的地方就去查阅一下，很有帮助</p>
+<p>《编写可维护的JavaScript》和：《Node.js开发指南》：不错的Nodejs入门书籍</p>
+<p>《深入浅出Node.js》：Nodejs进阶书籍，必备</p>
+<p>《JavaScript异步编程》：理解JS异步的编程理念</p>
+<p>《JavaScript框架设计》：在用轮子同时，应当知道轮子是怎么转起来的，讲解很详细，从源码级别讲解框架的各个部分的实现</p>
+<p>《高性能JavaScript》和《高性能HTML5》：强调性能的书，其中不只是性能优化，还有很多原理层面的东西值得学习</p>
+<p>《HTML5 Canvas核心技术》：我正在读的一本书，对于canvas的使用，动画的实现，以及动画框架的开发都非常有帮助</p>
+<p>《HTTP权威指南》：HTTP协议相关必备，前端开发调试的时候也会经常涉及到其中的知识</p>
+<p>《响应式Web设计》：技术本身不难，重要的是响应式网页的设计理念，以及移动先行的思想</p>
+
+				</div>
+				<div class="col-xs-12 cha">【便捷插件】</div>
+				<div class="col-xs-11 cha1">
+  <p> liveload: 修改页面后自动刷新，不用按F5</p>
+  <p> dimensions：直接在页面上测量的利器</p>
+  <p> livestyle：css样式修改后自动起效果，不需要刷新，elements修改后也能同步到代码中</p>
+  <p> image tool：测量，取色</p>
+  <p> UC二维码：移动端调试扫码必备</p>
+  <p> pagespeed，YSlow：页面性能分析和优化插件</p>
+  <p> 马克飞象：优秀的在线markdown编辑器，快速写周报，做记录</p>
+  <p>  sublime text2：编码方便，插件多，速度快，性能好</p>
+  <p> emmet：提升html编码速度必备</p>
+  <p> sublimelinter + 各种语言的lint和hint：代码纠错</p>
+  <p> 一些snippets：自动补全，提升开发效率</p>
+  <p> Intellij</p>
+  <p> IDEA和WebStorm：集成开发环境，集成了各种功能，开发比sublime要方便，但会比较吃性能</p>
+  <p> Mark Men：测量、取色、标注利器，拿到视觉稿之后第一个打开的软件</p>
+  <p> GFW Fucker：我用红杏，可以的话买个虚拟服务器当梯子</p>
+  <p> iHosts：非常优秀的hosts管理软件，轻松修改hosts，开发调试必备</p>
+  <p> Charles：Mac 平台最好用的抓包分析工具</p>
+  <p> Rythem：AlloyTeam出品的代理抓包软件，非常轻量，安装移动端（真机）开发调试很好用</p>
+  <p> Wunderlist：一个非常不错的Todo List，任务、需求多的时候管理起来很方便</p>
+				</div>
+				<div class="col-xs-12 net">【网站入口】</div>
+				<div class="col-xs-11 net1">
+<p>github：没啥好说的，多阅读别人的源码，多上传自己的源码，向世界各地的大牛学习</p> 
+<p>codepen：感受前端之美的必选之地，里面有很多酷炫的效果和优秀的插件</p>
+<p>echojs：快速了解js新资讯的网站</p>
+<p>stackoverflow和segmentfault：基本上各种问题都能在上面获得解答</p>
+<p>google web fundamentals：每篇文章都适合仔细阅读</p>
+<p>static files：开放的CDN，很好用</p>
+<p>iconfont：阿里的矢量图标库，非常不错，支持CDN而且支持项目</p>
+<p>html5 rocks: 一个不错的网站，很多浏览器的新特性以及前沿的技术，都能在这上面找到文章</p>
+<p>css tricks：如何活用CSS，以及了解CSS新特性，这里可以满足你</p>
+<p>JavaScript 秘密花园 JavaScript初学必看，非常不错</p>
+<p>w3cplus：一个前端学习的网站，里面的文章质量都挺不错的</p>
+<p>node school：一个不错的node学习网站</p>
+<p>learn git branch：一个git学习网站，交互很棒</p>
+<p>前端乱炖：一个前端文章分享的社区，有很多优秀文章</p>
+<p>正则表达式：一个正则表达式入门教程，非常值得一看</p>
+<p>阮一峰的博客和张鑫旭的博客：快速了解某些知识的捷径，但是如果需要深挖，还需要其他的资源</p>
+<p>各路大牛的博客：这个太多了，就不贴了，知乎上有很全的</p>
+<p>各种规范的官方网站，不懂得时候读规范</p>
+				</div>
+				<div class="col-xs-12 xiang">【项目】</div>
+				<div class="col-xs-11 xiang1">
+<p>版本管理：首推Git，用过Git都不会想用SVN了</p> 
+<p>Git：本地版本管理的机制</p> 
+<p>SVN：远程中心的版本管理机制</p> 
+<p>自动化构建：主要就是less、模板、coffee等的预处理以及对代码压缩和合并</p> 
+<p>Gulp：基于流构建，速度快、模块质量好</p> 
+<p>Grunt：独立任务构建，速度慢，配置蛋疼，灵活性高</p> 
+<p>预处理和模板引擎</p> 
+<p>less：语法简单，但功能有限</p> 
+<p>jade、ejs、velocity等模板引擎，各有各的长处</p> 
+<p>coffee：python工程师最爱，我没用过</p> 
+<p>环境搭建：主要是将线上代码映射到本地，并在本地启动一个demo服务器，至于模拟数据的mock，见仁见智了</p> 
+<p>本地代理：ihosts</p> 
+<p>自动化测试：在业务较为稳定的情况下，可以通过自动化测试来减少测试的事件，但需求较多的时候，维护测试用例的成本会很高，
+	可能用自动化测试会起到反效果</p> 
+<p>移动端Native开发：这也是需要了解的，以后前端工程师会经常地和webview打交道，也要了解native开发</p> 
+			</div>
+				<div class="col-xs-12 qian">【前段定位】</div>
+				<div class="col-xs-11 qian1">
+<p>前端的定位关乎到你需要吸收什么样的知识和技能，决定在技术世界里你对什么需要格外敏感。
+如果你认为前端仅仅停留在切页面，实现交互和视觉的要求，那你对前端的认识还停留在初级阶段。
+阿里终面的时候我问了考官这么个问题：前端技术日新月异，范围越扩越宽，标准越来越丰富，似乎任何一个触角都能伸出很远。
+怎么给前端一个合适的定位？考官给我分析了半天，然后总结成一句话，就是用户和网站的联结者，
+用户体验的创造者（原话不是这样，但大体是这个意思）。也就是说前端的终极目标其实就是创造用户体验，
+提升用户体验，以用户体验为中心。不管你是从交互设计上下手，还是从性能优化出发，或者改进工作流提升工作流效率，
+最终都是为了创造和提升用户体验，最终都要体现到用户体验这一点上来。我认为这个总结非常有道理（当然“用户体验”这
+个词太宽泛了，并且不仅仅是前端工程师的范畴，比如开发后台的时候对一个数据处理过程进行优化，提升了整体性能，这也是
+对用户体验的一个提升）。</p>	
+				</div>
+			</div>
+		</div>
+	</div>
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <nav class="page">
+  <ul class="pagination">
+    <li class="disabled"><a  aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+    <li ><a href="#">2 <span class="sr-only">(current)</span></a></li>
+    <li ><a href="#">3 <span class="sr-only">(current)</span></a></li>
+    <li ><a href="#">4 <span class="sr-only">(current)</span></a></li>
+    <li ><a href="#">5 <span class="sr-only">(current)</span></a></li>
+    <li class="disabled"><a  aria-label="Previous"><span aria-hidden="true">&rsaquo;&rsaquo;</span></a></li>
+  </ul>
+</nav>
+ 
+ 
+  </body>
+</html>

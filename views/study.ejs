@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/study.css' />
+    <script type="text/javascript" src="/js/jquery-1.11.0.js" ></script>
+    <script type="text/javascript" src="/js/common.js" ></script>
+  </head>
+  <body>
+    <%- include('header.ejs') %>
+		<%- include('music.ejs') %>
+		
+		<% if(!user){ %>
+				<a  class="btn btn-danger an" onclick="location.href='/login'">登录</a>
+				<a  class="btn btn-info an1" onclick="location.href='/register'">注册</a>
+			<% }else{ %>
+				<button class="btn btn-default an">欢迎：<%- user %></button>
+ 				<button class="btn btn-primary an1" onclick="location.href='/relogin'">退出</button>
+			<% } %>
+		<div class="bg">
+    		<ul class="bannerlist">
+				<li>
+					<marquee behavior="alternate" scrollamount="3"> 我们不停的翻弄着回忆</marquee>
+				</li> 
+				<li>
+					<marquee behavior="alternate" scrollamount="5"> 却再也找不回那时的自己</marquee>
+				</li>
+				<li>
+					<marquee behavior="alternate" scrollamount="7"> 红尘一梦，不再追寻</marquee>
+				</li>
+			</ul>
+			
+    </div>
+    
+    <div class="touxiang">
+			<a href="#"></a>
+			<div class="touyin">
+				<% if(!user){ %>
+					<span> 未登录 </span>
+				<% }else{ %>
+					<span>欢迎：<%- user %> </span>
+				<% } %>	
+			</div>
+		</div>
+
+  </body>
+</html>

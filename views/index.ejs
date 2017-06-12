@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+    <script type="text/javascript" src="/js/jquery-1.11.0.js" ></script>
+    <script type="text/javascript" src="/js/common.js" ></script>
+  </head>
+  <body>
+     <%- include('header.ejs') %>
+			
+<% if(!user){ %>
+				<a  class="btn btn-danger an" onclick="location.href='/login'">登录</a>
+				<a  class="btn btn-info an1" onclick="location.href='/register'">注册</a>
+			<% }else{ %>
+				<button class="btn btn-default an">欢迎：<%- user %></button>
+ 				<button class="btn btn-primary an1" onclick="location.href='/relogin'">退出</button>
+<% } %>
+
+	<div class="banner">
+		<section class="bannercon">
+			<ul class="bannerlist">
+				<li><marquee behavior="alternate" scrollamount="3"> 我们不停的翻弄着回忆</marquee></li>
+				<li><marquee behavior="alternate" scrollamount="5"> 却再也找不回那时的自己</marquee></li>
+				<li><marquee behavior="alternate" scrollamount="7"> 红尘一梦，不再追寻</marquee></li>
+			</ul>
+			<div class="touxiang">
+				<a href="#"></a>
+				<div class="touyin">
+					<% if(!user){ %>
+						<span> 未登录 </span>
+					<% }else{ %>
+						<span>欢迎：<%- user %> </span>
+					<% } %>	
+				</div>
+			</div>
+		</section>
+	</div>
+
+    <div class="moban">
+    	<div class="mobanbox">
+    		<h2>个人博客模板展示</h2>
+    		<hr />
+    		<ul class="mobanlist">
+    			<li> <img src="/images/bo1.jpg" /> </li>
+    			<li> <img src="/images/bo2.jpg" /> </li>
+    			<li> <img src="/images/bo3.gif" /> </li>
+    			<li> <img src="/images/bo4.gif" /> </li>
+    			<li> <img src="/images/bo5.jpg" /> </li>
+    		</ul>
+    	</div>
+    </div>
+    
+    <div class="con">
+    	<h3>文章推荐</h3>
+    		<div class="conleft">
+    			<section>
+    				<article>
+    					<h4>【匆匆那些年】总结个人博客经历的这四年</h4>
+    					<dl>
+    						<dt><img style="width: 200px;height: 200px;" src="/images/a1.jpg" /> </dt>
+    						<dd>
+    							博客从最初的域名购买，到上线已经有四年的时间了，这四年的时间，有笑过，有怨过，有悔过，有执着过，也有放弃过…但最后还是坚持了下来，
+    							时间如此匆匆，等再回过头已来不及去弥补
+    							<a class="btn btn-danger yuedu" href="/study.html" target="_blank">阅读全文》</a>
+    						</dd>
+    					</dl>
+    					<ul class="conlist">
+    						<li>2017年6月9日</li>
+    						<li>作者：ght</li>
+    						<li>个人博客：【心得体会】</li>
+    					</ul>
+    				</article>
+    				
+    				<article>
+    					<h4>分享我的个人博客访问量如何做到IP从10到600的(图文)</h4>
+    					<dl>
+    						<dt><img style="width: 200px;height: 200px;" src="/images/a2.jpg" /> </dt>
+    						<dd>
+    						我的个人博客总共展示了三个版本，界面也经历了由“简单”到“复杂”再到“简单”，颜色从“色泽单一”到“五彩斑斓”再到“局部点缀”的过程。
+    						原来一年一个版本！而每次改版的契机都是被百度惩罚！
+    						界面不要频繁更换！好好检查代码，有没有冗余、结构有没有不合理的地方。
+    							<a class="btn btn-danger yuedu" href="/study.html" target="_blank">阅读全文》</a>
+    						</dd>
+    					</dl>
+    					<ul class="conlist">
+    						<li>2017年6月10日</li>
+    						<li>作者：ght</li>
+    						<li>个人博客：【心得体会】</li>
+    					</ul>
+    				</article>
+    				
+    				<article>
+    					<h4>如果要学习web前端开发，需要学习什么？</h4>
+    					<dl>
+    						<dt><img style="width: 200px;height: 200px;" src="/images/a3.jpg" /> </dt>
+    						<dd>
+    						遇到很多新手，都会问，如果要学习web前端开发，需要学习什么？难不难？多久能入门？怎么能快速建一个网站？工资能拿到多少？
+    						还有些让我推荐一些培训机构什么的要去学习。我建议是自学，
+    						实在是觉得自己没有这个能力，确实是需要一个老师的话，那你还是自己做主找个老师吧！
+    							<a class="btn btn-danger yuedu" href="/study.html" target="_blank">阅读全文》</a>
+    						</dd>
+    					</dl>
+    					<ul class="conlist">
+    						<li>2017年6月11日</li>
+    						<li>作者：ght</li>
+    						<li>个人博客：【心得体会】</li>
+    					</ul>
+    				</article>
+    				
+    			</section>
+    		</div>
+    		<div class="conright">
+		      <input type="text" class="form-control" id="exampleInputAmount" placeholder="搜索">
+		      <button type="submit" class="btn btn-primary search">search</button>
+					<div class="news">
+						<h5>最新文章</h5>
+						<hr />
+						<ul class="newslist">
+							<li> <a> 2017年度优秀个人博客排名公布</a> </li>
+							<li> <a> 2017年度优秀个人博客排名公布</a> </li>
+							<li> <a> 2017年度优秀个人博客排名公布</a> </li>
+						</ul>
+					</div>
+				
+				
+					<div class="news">
+						<h5>模板排行</h5>
+						<hr />
+						<ul class="newslist">
+							<li> <a> 2017年度优秀个人博客排名公布</a> </li>
+							<li> <a> 2017年度优秀个人博客排名公布</a> </li>
+							<li> <a> 2017年度优秀个人博客排名公布</a> </li>
+						</ul>
+					</div>
+    		</div>
+   
+    	
+    </div>
+    
+  </body>
+</html>

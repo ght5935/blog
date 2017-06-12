@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" />
+    <link rel="stylesheet" href="/stylesheets/login_register.css" />
+  </head>
+  <body>
+    <%- include('header.ejs') %>
+		<%- include('music.ejs') %>
+		
+    <div class="bg">
+    	<ul class="bannerlist">
+				<li><marquee behavior="alternate" scrollamount="3"> 我们不停的翻弄着回忆</marquee></li> 
+				<li><marquee behavior="alternate" scrollamount="5"> 却再也找不回那时的自己</marquee></li>			
+				<li><marquee behavior="alternate" scrollamount="7"> 红尘一梦，不再追寻</marquee></li>
+			</ul>
+    </div>
+    <div class="register">
+    	<div style="width: 400px;margin: 0 auto;">
+		    <form action="/users/form" method="post">
+		    	<div class="hang"><span >昵称 ：</span>	<input class="form-control" type="text"  name="nick" /></div> 
+		    	<div class="hang"><span >账号 ：</span><input class="form-control" type="text"  name="zh"/> </div>
+		    	<div class="hang"><span >手机号 ：</span><input class="form-control" type="text"  name="tel" /> </div>
+		    	<div class="hang"><span >邮箱 ：</span><input class="form-control" type="text"  name="you" /> </div>
+		    	<div class="hang"><span >验证码 ：</span><input type="text" class="form-control"  placeholder="验证码"></div>	
+		    	<div class="hang"><span >密码 ：</span><input class="form-control" type="text"  name="pass" /> </div>
+		    	<input id="btn" class="btn btn-danger" type="submit" value="注册提交"/>
+		    </form>
+	    </div>
+    </div>
+    
+    <script>
+    	var iput = document.getElementsByClassName('form-control');
+ 
+    	btn.onclick = function(){
+    		
+    		if(iput[0].value == "" || iput[1].value == ""){
+    			alert('内容不能为空')
+    			return false;
+    		}
+    	}
+    		
+    		
+    </script>
+    
+  </body>
+</html>

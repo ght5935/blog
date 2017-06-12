@@ -1,0 +1,39 @@
+.touxiang {
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	padding: 5px;
+	background: #fff;
+	position: absolute;
+	right: 60px;
+	top: 110px;
+	overflow: hidden;
+}
+
+.touxiang a {
+	display: block;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	background: url(../images/photo.jpg) no-repeat center;
+	background-size: cover;
+}
+.touyin {
+	width: 120px;
+	height: 40px;
+	background: #333;
+	opacity: .5;
+	position: absolute;
+	top: 90px;
+	left: 6px;
+	cursor: pointer;
+	display: none;
+}
+
+.touyin span {
+	color: yellow;
+	font-size: 16px;
+	
+	line-height: 30px;
+	margin-left: 28px;
+}

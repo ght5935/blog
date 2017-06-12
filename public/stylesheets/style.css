@@ -1,0 +1,92 @@
+*{margin: 0;padding:0}
+body {
+  html,body{height: 100%;}
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+li{
+	list-style:none;
+}
+.headtop {
+	width: 100%;
+	height: 100px;
+	background: #27262c;
+	opacity:.8;
+}
+
+.an1{position: absolute;right:40px;top:30px;}
+.an{position: absolute;right:120px;top:30px;}
+.head {
+	width: 1000px;
+	height: 100px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.headleft {
+	width: 260px;
+	height: 60px;
+	margin-top: 20px;
+	float: left;
+}
+
+.logo {
+	display: block;
+	width: 260px;
+	height: 60px;
+	cursor: pointer;
+}
+
+.headright {
+	width: 700px;
+	height: 100px;
+	float: right;
+}
+
+.headlist li {
+	height: 100px;
+	width: 140px;
+	line-height: 100px;
+	float: left;
+	text-align: center;
+}
+
+.headlist li a {
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.headlist li:hover {
+	background: #000;
+	opacity: .4;
+}
+
+.headlist li:hover a {
+	color:yellow;
+}
+
+
+/*大的背景图*/
+
+.bg {
+	width: 100%;
+	height:670px;
+	background: url(/images/banner_top.jpg) no-repeat center;
+	background-size:cover;
+	position: absolute;
+	z-index: -1;
+}
+.bannerlist {
+	margin-top: 100px;
+	width: 400px;
+}
+
+.bannerlist li {
+	line-height: 30px;
+	font-size: 20px;
+	color: #333;
+	text-shadow: 2px 2px 1px #f6ed59;
+}

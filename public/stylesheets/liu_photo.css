@@ -1,0 +1,94 @@
+.touxiang {
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	padding: 5px;
+	background: #fff;
+	position: absolute;
+	right: 10px;
+	top:130px;
+}
+
+.touxiang a {
+	display: block;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	background: url(../images/photo.jpg) no-repeat center;
+	background-size: cover;
+}
+
+.touyin {
+	width: 120px;
+	height: 40px;
+	background: #333;
+	opacity: .5;
+	position: absolute;
+	top: 90px;
+	left: 6px;
+	cursor: pointer;
+	display: none;
+}
+
+.touyin span {
+	color: yellow;
+	font-size: 18px;
+	line-height: 30px;
+	margin-left: 28px;
+}
+
+.liuyanbox {
+	width: 800px;
+	min-height: 400px;
+	display: flex;
+	margin: 0 auto;
+}
+
+.liuyanbox div {
+	width: 400px;
+}
+
+.liu {
+	background: #9cb1ce;
+	opacity: .7;
+	color: yellow;
+	font-size: 24px;
+}
+
+.table td {
+	color: yellow;
+}
+
+img {
+	vertical-align: bottom;
+}
+
+#list {
+	margin:30px 0 0 220px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#list li {
+	position: relative;
+	width: 340px;
+	height: 290px;
+	overflow: hidden;
+	padding: 5px;
+	background: gold;
+	margin:3px;
+	border-radius: 10px;
+}
+
+#list li img {
+	width: 100%;
+	height: 100%;
+}
+
+#list li div {
+	position: absolute;
+	width: 350px;
+	height: 380px;
+	opacity: .5;
+	background-size: cover;
+}

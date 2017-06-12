@@ -1,0 +1,127 @@
+	<script type="text/javascript" src="/js/jquery-1.11.0.js" ></script>
+	
+	<style type="text/css">
+		#square {
+			width: 220px;
+			height: 220px;
+			position: absolute;
+			right: 5%;
+			bottom:25%;
+			
+		}
+		
+		.mp3 {
+			width: 200px;
+			height:200px;
+			position: absolute;
+			bottom: -100px;
+			right: 10px;
+			background-size:cover;
+			background:url(/images/3.jpg);
+			opacity: .5;
+			z-index: 9;
+			
+		}
+		
+		#wu {
+			width: 210px;
+			height: 210px;
+			margin: 100px auto;
+			perspective: 400px;
+			position: relative;
+		}
+		
+		#ro {
+			width: 200px;
+			height: 200px;
+			transform-style: preserve-3d;
+			position: relative;
+		}
+		
+		#ro div {
+			width: 200px;
+			height: 200px;
+			opacity: .9;
+			position: absolute;
+		}
+		
+		#ro img {
+			width: 200px;
+			height: 200px;
+		}
+		
+		.f1 {
+			transform: rotatey(90deg) translatez(-100px);
+		}
+		
+		.f2 {
+			transform: rotatey(90deg) translatez(100px);
+		}
+		
+		.f3 {
+			transform: translatez(-100px);
+		}
+		
+		.f4 {
+			transform: translatez(100px);
+		}
+	</style>
+
+<script>
+	$(function(){
+		
+		
+				var iNum = 0;
+				var num =1;
+					// 定时运动
+				var oTimer = setInterval(function (){
+					iNum = (iNum + 90) % 360;
+	                $("#ro").css({transform:"rotatey("+ iNum +"deg)"});
+	                $("#ro").css({transition:"3s"});
+	                
+	                $(".mp3").animate({bottom:10},3000,function(){
+	                	setTimeout(function(){
+	                		$(".mp3").animate({bottom:-100},3000)
+	                	},4000)
+	                	
+	                })
+	               
+	                $(".mp3").css({background:"url(/images/"+num+".jpg)"});
+	                $(".mp3").css({backgroundSize:"cover"});
+	                num++;
+	                if(num>7){
+	                	num=1;
+	                }
+				}, 3000);
+				
+	});
+</script>
+
+
+<div id="square">
+	<audio class="mp3" controls="controls" loop="loop" autoplay="autoplay">
+	  <source src="/vidio/蔡依林 - 倒带.mp3" type="audio/mpeg">
+	</audio>
+	
+	<div id="wu">
+		<div id="ro">
+
+	    	<div class="f1">
+	    		<img src="/images/1.jpg">
+	    	</div>
+
+	        <div class="f2">
+	        	<img src="/images/2.jpg">
+	        </div>
+
+	        <div class="f3">
+	        	<img src="/images/3.jpg">
+	        </div>
+
+	        <div class="f4">
+	        	<img src="/images/4.jpg">
+	        </div> 
+	        
+	    </div>
+ 	</div>
+</div> 	

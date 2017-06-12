@@ -1,0 +1,187 @@
+.banner {
+	width: 100%;
+	height: 270px;
+	background: url(/images/banner_top.jpg);
+	overflow: hidden;
+}
+
+.bannercon {
+	width: 1000px;
+	height: 270px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.bannerlist {
+	margin-top: 100px;
+	width: 400px;
+}
+
+.bannerlist li {
+	line-height: 30px;
+	font-size: 20px;
+	color: #333;
+	text-shadow: 2px 2px 1px #f6ed59;
+}
+
+.touxiang {
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	padding: 5px;
+	background: #fff;
+	position: absolute;
+	right: -60px;
+	top: -96px;
+	overflow: hidden;
+}
+
+.touxiang a {
+	display: block;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	background: url(../images/photo.jpg) no-repeat center;
+	background-size: cover;
+}
+.touyin {
+	width: 120px;
+	height: 40px;
+	background: #333;
+	opacity: .5;
+	position: absolute;
+	top: 90px;
+	left: 6px;
+	cursor: pointer;
+	display: none;
+}
+
+.touyin span {
+	color: yellow;
+	font-size: 16px;
+	
+	line-height: 30px;
+	margin-left: 28px;
+}
+
+
+
+.ylogin {
+	width: 200px;
+	height: 150px;
+	position: absolute;
+	left: 30%;
+	background: #ccc;
+}
+
+.moban {
+	width: 100%;
+	height: 205px;
+	background: #ccc;
+}
+
+.mobanbox {
+	width: 1000px;
+	height: 205px;
+	margin: 0 auto;
+}
+
+.mobanlist {}
+
+.mobanlist li {
+	float: left;
+	margin: 0 6px;
+}
+
+.mobanlist li img {
+	width: 185px;
+	height: 118px;
+}
+
+.con {
+	width: 1000px;
+	min-height: 800px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.conleft section {
+	width: 740px;
+	min-height: 800px;
+	float: left;
+	background: #eee;
+}
+
+.conleft section article {
+	width: 740px;
+	height: 270px;
+	margin: 5px 0;
+}
+
+.conleft section article h4 {
+	width: 300px;
+	height: 20px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: #a5381b;
+}
+
+.conleft section article dl {
+	width: 740px;
+	height: 200px;
+}
+
+.conleft section article dl dt {
+	float: left;
+	width: 200px;
+	height: 200px;
+}
+
+.conleft section article dl dd {
+	float: right;
+	width: 500px;
+	height: 160px;
+	margin: 20px 0;
+	text-indent: 24px;
+	position: relative;
+}
+
+.yuedu {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+
+.conlist li {
+	float: left;
+	margin: 0 30px;
+}
+
+.conright {
+	width: 250px;
+	min-height: 800px;
+	float: right;
+	position: relative;
+}
+
+.search {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.newslist {
+	width: 250px;
+	height: 300px;
+	margin: 5px 0;
+}
+
+.newslist li {
+	margin-left: 10px;
+	line-height: 24px;
+}
+
+.newslist li a {
+	color: #666;
+}

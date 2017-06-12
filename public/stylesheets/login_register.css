@@ -1,0 +1,51 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.register {
+	width: 600px;
+	height: 400px;
+	position: absolute;
+	left: 26%;
+	top:20%;
+	background: #60f57c;
+	opacity: .8;
+	border-radius: 10px;
+}
+
+.logn {
+	width: 400px;
+	height:350px;
+	background: #aaf560;
+	position: absolute;
+	top: 20%;
+	left: 35%;
+	opacity: .8;
+}
+.hang {
+	display: flex;
+	margin: 30px 0;
+}
+
+.hang span {
+	display: block;
+	width: 80px;
+	margin-left: 10px;
+}
+
+#zlogin {
+	margin-left: 150px;
+}
+
+#btn {
+	margin-left: 150px;
+}
